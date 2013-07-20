@@ -29,5 +29,5 @@ if ! [ -d "$HOME/.janus/" ]; then
   cp -R .janus/ $HOME/.janus/
   cd "$HOME/.janus"
   git submodule update --init --recursive
+  curl -Lo- https://bit.ly/janus-bootstrap | bash
 fi
-  #curl -Lo- https://bit.ly/janus-bootstrap | bash
