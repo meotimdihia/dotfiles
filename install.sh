@@ -23,4 +23,11 @@ do
 	fi
 done
 
-curl -Lo- https://bit.ly/janus-bootstrap | bash
+# install janus
+if ! [ -d "$HOME/.janus/" ]; then
+  echo " Copying janus configs"
+  cp -R .janus/ $HOME/.janus/
+  cd "$HOME/.janus"
+  git submodule update --init --recursive
+fi
+  #curl -Lo- https://bit.ly/janus-bootstrap | bash
