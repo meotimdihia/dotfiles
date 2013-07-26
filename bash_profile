@@ -15,7 +15,7 @@ fi
 
 function gcp()
 {
-	git add * && git commit -am "$1" && git push
+	git add i && git commit -am "$1" && git push
 }
 choose () {
     local PS3="Choose a file to edit: "
